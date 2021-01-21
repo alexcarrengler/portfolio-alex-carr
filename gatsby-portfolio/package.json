@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Miles Grossenbacher",
   "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
     "gatsby": "^2.26.1",
     "gatsby-background-image": "^1.4.0",
     "gatsby-image": "^2.5.0",

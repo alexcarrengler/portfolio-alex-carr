@@ -1,22 +1,72 @@
+.title {
+	margin-top: 0;
+	padding: 1.5rem;
+	font-size: 3rem;
+	letter-spacing: 0.35rem;
+}
+
 .iframeContainer {
-    margin: 1rem;
-    max-width: 840px;
-    max-height: 472px;
-    position: relative;
-    align-self: center;
+	margin: 1rem;
+	max-width: 840px;
+	max-height: 472px;
+	position: relative;
 	overflow: hidden;
 	width: 95%;
+	flex-shrink: 0;
 	padding-top: 56.25%;
 }
 
 .iframeResponsive {
+	border: 3px solid white;
 	position: absolute;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	right: 0;
 	width: 100%;
-    height: 100%;
-    max-width: 840px;
-    max-height: 472px;
+	height: 100%;
+	max-width: 840px;
+	max-height: 472px;
+}
+
+.info {
+	margin-top: 3rem;
+	font-size: 1.5rem;
+	letter-spacing: 0.35rem;
+	margin-bottom: 0.5rem;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .info{
+        margin-top: -5%;
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .info{
+        margin-top: -15%;
+    }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+    .info{
+        margin-top: -20%;
+    }
+}
+@media (min-width: 1700px) {
+    .info{
+        margin-top: -25%;
+    }
 }

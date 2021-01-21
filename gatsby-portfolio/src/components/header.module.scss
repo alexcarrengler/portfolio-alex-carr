@@ -1,0 +1,24 @@
+.component{
+    position: fixed;
+    top: 0;
+    background-color: transparent;
+    width: 100vw;
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgContainer{
+    padding: 1rem;
+    width: 150px;
+    height: 150px;
+    
+}
+
+.img {
+    width: 100%;
+    border-radius: 50%;
+}

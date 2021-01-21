@@ -1,3 +1,13 @@
 @import '~sanitize.css';
 @import '~sanitize.css/forms.css';
 @import '~sanitize.css/typography.css';
+
+body{
+    color: white;
+}
+
+
+// utilities
+.flex-center{
+    align-self: center;
+}
