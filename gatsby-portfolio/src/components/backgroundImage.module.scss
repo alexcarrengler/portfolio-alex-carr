@@ -1,0 +1,27 @@
+.componentFlex {
+	width: 100%;
+	min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.componentBlock {
+	width: 100%;
+	min-height: 100vh;
+}
+
+.componentInverse {
+	width: 100%;
+	min-height: 100vh;
+    filter: hue-rotate(180deg)
+}
+
+.title {
+    margin-top: 0;
+    padding: 1.5rem;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    letter-spacing: 0.35rem;
+}

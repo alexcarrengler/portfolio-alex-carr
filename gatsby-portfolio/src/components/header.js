@@ -1,18 +1,13 @@
-import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
+// import {Link} from "gatsby"
+
+const Header = () => (
   <header>
-    {siteTitle}
+    <nav>
+      {/* <Link to="/contact">Alex Carr</Link> */}
+    </nav>
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
