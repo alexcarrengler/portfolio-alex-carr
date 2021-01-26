@@ -53,12 +53,17 @@ const IndexPage = () => {
 						Habitant morbi tristique senectus et netus. Tristique nulla aliquet enim tortor at.
 					</p>
 				</FullBackground>
-				<FullBackground className={`${backgroundImageStyle.componentBlock} ${backgroundImageStyle.colorRotate}`}>
+				<FullBackground className={`${backgroundImageStyle.componentBlock} ${backgroundImageStyle.colorRotate2}`}>
 					<div id="scroll-projects">
 						<h2 className={`${indexStyle.sectionTitle}`}>Projects</h2>
 					</div>
 					<div className={indexStyle.projectsWrapper}></div>
 				</FullBackground >
+				<FullBackground className={`${backgroundImageStyle.componentBlock} ${backgroundImageStyle.colorRotate}`}>
+					<div id="scroll-contact">
+						<h2 className={`${indexStyle.sectionTitle}`}>Contact</h2>
+					</div>
+				</FullBackground>
 			</section>
 		</div>
 	);

@@ -30,7 +30,7 @@
 	max-height: 472px;
 }
 
-.seeMoreWrapper{
+.seeMoreWrapper {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -47,9 +47,11 @@
 	margin: 0;
 	padding: 1rem;
 	padding-top: 3.5rem;
+	letter-spacing: 0.15rem;
+	
 }
 
-.aboutText{
+.aboutText {
 	margin: 0;
 	font-size: 1rem;
 	margin: 0.5rem;
@@ -58,7 +60,7 @@
 	background-color: rgba(0, 0, 0, 0.701);
 }
 
-.projectsWrapper{
+.projectsWrapper {
 	width: 100%;
 	height: auto;
 	display: flex;
@@ -71,31 +73,30 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-    
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-    .info{
-        margin-top: -5%;
-    }
+	.info {
+		margin-top: -5%;
+	}
 }
 
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-    .info{
-        margin-top: -15%;
-    }
+	.info {
+		margin-top: -15%;
+	}
 }
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {
-    .info{
-        margin-top: -20%;
-    }
+	.info {
+		margin-top: -20%;
+	}
 }
 @media (min-width: 1700px) {
-    .info{
-        margin-top: -25%;
-    }
+	.info {
+		margin-top: -25%;
+	}
 }
