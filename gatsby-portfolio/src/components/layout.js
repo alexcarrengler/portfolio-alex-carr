@@ -4,10 +4,11 @@ import PropTypes from "prop-types";
 import Header from "./header";
 
 import "../main.scss";
+import layoutStyle from "./layout.module.scss"
 
 const Layout = ({ children }) => {
 	return (
-		<div>
+		<div className={layoutStyle.container}>
 			<Header />
 			<div>
 				<main>{children}</main>

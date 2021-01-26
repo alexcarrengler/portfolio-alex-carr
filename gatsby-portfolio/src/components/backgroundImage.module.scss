@@ -1,5 +1,5 @@
 .componentFlex {
-	width: 100%;
+	width: 100vw;
 	min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -7,14 +7,16 @@
 }
 
 .componentBlock {
-	width: 100%;
+	width: 100vw;
 	min-height: 100vh;
+	z-index: 0;
 }
 
-.componentInverse {
-	width: 100%;
-	min-height: 100vh;
+.colorInverse {
 	filter: hue-rotate(180deg);
-	z-index: 0;
+}
+
+.colorRotate {
+	filter: hue-rotate(90deg);
 }
 

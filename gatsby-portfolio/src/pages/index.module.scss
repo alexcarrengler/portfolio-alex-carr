@@ -1,5 +1,6 @@
 .title {
 	margin-top: 0;
+	margin-bottom: 0;
 	padding: 1.5rem;
 	font-size: 3rem;
 	letter-spacing: 0.35rem;
@@ -29,11 +30,39 @@
 	max-height: 472px;
 }
 
+.seeMoreWrapper{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 .info {
 	margin-top: 3rem;
 	font-size: 1.5rem;
 	letter-spacing: 0.35rem;
 	margin-bottom: 0.5rem;
+}
+
+.sectionTitle {
+	margin: 0;
+	padding: 1rem;
+	padding-top: 3.5rem;
+}
+
+.aboutText{
+	margin: 0;
+	font-size: 1rem;
+	margin: 0.5rem;
+	margin-bottom: 0;
+	padding: 0.5rem;
+	background-color: rgba(0, 0, 0, 0.701);
+}
+
+.projectsWrapper{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
 }
 
 // Small devices (landscape phones, 576px and up)
