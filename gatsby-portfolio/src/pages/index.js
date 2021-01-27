@@ -4,6 +4,7 @@ import scrollTo from "gatsby-plugin-smoothscroll";
 
 import SEO from "../components/seo";
 import FullBackground from "../components/backgroundImage";
+import ContactForm from "../components/contactForm";
 
 import { FaAngleDown } from "@react-icons/all-files/fa/FaAngleDown";
 
@@ -62,6 +63,9 @@ const IndexPage = () => {
 				<FullBackground className={`${backgroundImageStyle.componentBlock} ${backgroundImageStyle.colorRotate}`}>
 					<div id="scroll-contact">
 						<h2 className={`${indexStyle.sectionTitle}`}>Contact</h2>
+					</div>
+					<div>
+						<ContactForm />
 					</div>
 				</FullBackground>
 			</section>
