@@ -13,7 +13,7 @@ export default function contactForm() {
 				<textarea
 					name="text"
 					className={formStyle.feedbackInput}
-					placeholder="Comment"
+					placeholder="Message"
 				/>
                 <input type="submit" value="SUBMIT"/>
 			</form>

@@ -1,13 +1,24 @@
 form { 
     width: 80%;
     max-width:420px; 
-    margin:2rem auto; }
+    margin:2rem auto; 
+  }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px black inset !important;
+}
+input:-webkit-autofill {
+    -webkit-text-fill-color: white !important;
+}
 
 .feedbackInput {
   color:white;
   font-family: Helvetica, Arial, sans-serif;
   font-weight:500;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 5px;
   line-height: 22px;
   background-color: black;
@@ -20,7 +31,7 @@ form {
   outline:0;
 }
 
-.feedbackInput:focus { border:2px solid rgb(172, 172, 172); }
+.feedbackInput:focus { border:2px solid rgb(204, 204, 77); }
 
 textarea {
   height: 150px;
@@ -31,7 +42,7 @@ textarea {
 [type="submit"] {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   width: 100%;
-  background:rgb(211, 211, 211);
+  background:white;
   border-radius:5px;
   border:0;
   cursor:pointer;

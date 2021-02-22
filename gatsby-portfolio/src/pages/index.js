@@ -3,13 +3,13 @@ import React from "react";
 import scrollTo from "gatsby-plugin-smoothscroll";
 
 import SEO from "../components/seo";
-import FullBackground from "../components/backgroundImage";
+import FullBackground from "../components/imageComponents/backgroundImage";
 import ContactForm from "../components/contactForm";
 
 import { FaAngleDown } from "@react-icons/all-files/fa/FaAngleDown";
 
 import indexStyle from "./index.module.scss";
-import backgroundImageStyle from "../components/backgroundImage.module.scss";
+import backgroundImageStyle from "../components/imageComponents/backgroundImage.module.scss";
 
 const IndexPage = () => {
 	return (
@@ -54,12 +54,12 @@ const IndexPage = () => {
 						Habitant morbi tristique senectus et netus. Tristique nulla aliquet enim tortor at.
 					</p>
 				</FullBackground>
-				<FullBackground className={`${backgroundImageStyle.componentBlock} ${backgroundImageStyle.colorRotate2}`}>
+				{/* <FullBackground className={`${backgroundImageStyle.componentBlock} ${backgroundImageStyle.colorRotate2}`}>
 					<div id="scroll-projects">
 						<h2 className={`${indexStyle.sectionTitle}`}>Projects</h2>
 					</div>
 					<div className={indexStyle.projectsWrapper}></div>
-				</FullBackground >
+				</FullBackground > */}
 				<FullBackground className={`${backgroundImageStyle.componentBlock} ${backgroundImageStyle.colorRotate}`}>
 					<div id="scroll-contact">
 						<h2 className={`${indexStyle.sectionTitle}`}>Contact</h2>

@@ -17,7 +17,7 @@ const FullBackground = ({ className ,children}) => {
       query {
         desktop: file(relativePath: { eq: "jr-korpa-sFlfNcnrmDE-unsplash.jpg" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 4160) {
+            fluid(quality: 60, maxWidth: 4160) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
