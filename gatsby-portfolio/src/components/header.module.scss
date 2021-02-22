@@ -58,8 +58,8 @@
 
 // hamburger
 .hamburger {
-  margin-right: 1rem;
-  margin-top: 1rem;
+	margin-right: 1rem;
+	margin-top: 1rem;
 	position: relative;
 	height: 44px;
 	width: 44px;
@@ -67,7 +67,7 @@
 	cursor: pointer;
 	-webkit-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 .hamburger:before {
 	content: "";
@@ -123,4 +123,78 @@
 	-ms-transform: translateY(-13px) rotate(90deg);
 	-o-transform: translateY(-13px) rotate(90deg);
 	transform: translateY(-13px) rotate(90deg);
+}
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	.imgContainer {
+		padding: 18px;
+		width: 100px;
+		height: 100px;
+	}
+
+	.hamburger {
+		margin-right: 1rem;
+		margin-top: 1rem;
+		position: relative;
+		height: 60px;
+		width: 60px;
+	}
+	.hamburger:before {
+		position: absolute;
+		height: 65px;
+		width: 65px;
+		top: calc(50% - 31px);
+		left: calc(50% - 33px);
+	}
+	.hamburger.isActive .hamburgerLine {
+		width: 40px;
+	}
+	.hamburgerLine {
+		width: 60px;
+		height: 6px;
+		background-color: rgb(255, 255, 255);
+		display: block;
+		margin: 12px auto;
+	}
+	.hamburger.isActive .hamburgerLine:nth-child(1) {
+		-webkit-transform: translateY(17px);
+		-ms-transform: translateY(17px);
+		-o-transform: translateY(17px);
+		transform: translateY(17px);
+	}
+
+	.hamburger.isActive .hamburgerLine:nth-child(3) {
+		-webkit-transform: translateY(-18px) rotate(90deg);
+		-ms-transform: translateY(-18px) rotate(90deg);
+		-o-transform: translateY(-18px) rotate(90deg);
+		transform: translateY(-18px) rotate(90deg);
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+	.imgContainer {
+		padding: 18px;
+		width: 120px;
+		height: 120px;
+	}
+	.hamburger{
+		margin-top: 1.5rem;
+	}
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
 }
