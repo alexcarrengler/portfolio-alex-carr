@@ -4,8 +4,7 @@ import scrollTo from "gatsby-plugin-smoothscroll";
 import { FaAngleUp } from "@react-icons/all-files/fa/FaAngleUp";
 import { FaHome } from "@react-icons/all-files/fa/FaHome";
 
-import navImg from "../images/navbar-img.png";
-// import {Link} from "gatsby"
+import NavImg from "../components/imageComponents/headerImage";
 import headerStyle from "../components/header.module.scss";
 
 export default function Header() {
@@ -40,7 +39,8 @@ export default function Header() {
 				</div>
 				<nav className={headerStyle.nav}>
 					<div className={headerStyle.imgContainer} role="link" onClick={() => scrollTo("#top")}>
-						<img src={navImg} alt="nav img" className={headerStyle.img} />
+						{/* <img src={navImg} alt="nav img" className={headerStyle.img} /> */}
+						<NavImg />
 						<div className={headerStyle.middle}>
 							<div className={headerStyle.text}>
 								<FaAngleUp />

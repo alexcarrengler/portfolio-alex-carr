@@ -15,7 +15,7 @@ export default function contactForm() {
 					className={formStyle.feedbackInput}
 					placeholder="Message"
 				/>
-                <input type="submit" value="SUBMIT"/>
+                <input type="submit" value="Send"/>
 			</form>
 		</div>
 	);
