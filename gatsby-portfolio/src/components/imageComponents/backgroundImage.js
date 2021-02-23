@@ -15,7 +15,7 @@ const FullBackground = ({ className ,children}) => {
   const { desktop } = useStaticQuery(
     graphql`
       query {
-        desktop: file(relativePath: { eq: "jr-korpa-sFlfNcnrmDE-unsplash.jpg" }) {
+        desktop: file(relativePath: { eq: "background1.png" }) {
           childImageSharp {
             fluid(quality: 60, maxWidth: 4160) {
               ...GatsbyImageSharpFluid_withWebp

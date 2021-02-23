@@ -65,10 +65,7 @@ const IndexPage = () => {
 							pharetra magna ac placerat vestibulum lectus mauris ultrices. Vitae suscipit tellus mauris a
 							diam maecenas sed enim. Faucibus ornare suspendisse sed nisi lacus. Leo duis ut diam quam
 							nulla porttitor massa id neque. Condimentum id venenatis a condimentum vitae sapien
-							pellentesque habitant. Tortor condimentum lacinia quis vel eros donec. Egestas fringilla
-							phasellus faucibus scelerisque eleifend donec pretium. Elementum nibh tellus molestie nunc
-							non blandit massa enim. Habitant morbi tristique senectus et netus. Tristique nulla aliquet
-							enim tortor at.
+							pellentesque habitant.
 						</p>
 					</div>
 				</FullBackground>
