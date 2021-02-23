@@ -1,43 +1,55 @@
-.introSection{
-	background-color: rgb(176, 178, 206);
+.introSection {
+	background: rgb(176, 178, 206);
+	background: linear-gradient(0deg, rgb(176, 178, 206) 50%, rgb(172, 196, 196) 50%);
 	width: 100vw;
 	min-height: 100vh;
 	max-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-.bioSection{
-	background-color: rgb(172,196,196);
+.bioSection {
+	background-color: rgb(176, 178, 206);
+	background: linear-gradient(0deg, rgb(145, 168, 182) 50%, rgb(176, 178, 206) 50%);
 	width: 100vw;
 	min-height: 100vh;
 	z-index: 0;
 }
 
-.projectsSection{
-	background-color: rgb(145, 168, 182);
+.projectsSection {
+	background: rgb(145, 168, 182);
+	background: linear-gradient(0deg, rgb(180, 176, 162) 50%, rgb(145, 168, 182) 50%);
 	width: 100vw;
 	min-height: 100vh;
 	z-index: 0;
 }
 
-.contactSection{
-	background-color: rgb(180, 176, 162);
+.contactSection {
+	background: rgb(180, 176, 162);
+	background: linear-gradient(0deg, rgb(172, 196, 196) 50%, rgb(180, 176, 162) 50%);
 	width: 100vw;
 	min-height: 100vh;
 	z-index: 0;
+}
+
+.titleWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 .title {
-	position: absolute;
-	top: 13%;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding: 1.5rem;
+	margin: 0 auto;
+	padding: 0;
 	// padding-top: 10%;
 	font-size: 3.5rem;
 	letter-spacing: 0.35rem;
+}
+
+.subTitle {
+	margin: 0 auto;
 }
 
 .iframeContainer {
@@ -64,19 +76,18 @@
 	max-height: 472px;
 }
 
-.iframeDesktop{
+.iframeDesktop {
 	display: none;
 }
 
-.iframeFullSize{
+.iframeFullSize {
 	border: 3px solid white;
 }
 
 .seeMoreWrapper {
-	position: absolute;
 	margin: 0 auto;
-	padding-top: 24px;
-	bottom: 15%;
+	margin-top: 24px;
+	padding-top: 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -91,7 +102,7 @@
 	margin-bottom: 0.5rem;
 }
 
-.infoIcon{
+.infoIcon {
 	font-size: 1.5rem;
 }
 
@@ -101,7 +112,6 @@
 	padding: 1rem;
 	padding-top: 64px;
 	letter-spacing: 0.15rem;
-	
 }
 
 .aboutText {
@@ -109,7 +119,7 @@
 	font-size: 1rem;
 	margin: 0 0.5rem;
 	padding: 0.5rem;
-	background-color: rgb(149, 179, 179);
+	background-color: rgb(190, 189, 170);
 	border-radius: 10px;
 }
 
@@ -126,41 +136,39 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-	.title{
+	.title {
 		font-size: 5rem;
 	}
-	.sectionTitle{
+	.sectionTitle {
 		text-align: left;
 		padding-top: 110px;
 	}
-	.seeMoreWrapper{
+	.seeMoreWrapper {
 		font-size: 2rem;
 		bottom: 10%;
 	}
-	.infoIcon{
+	.infoIcon {
 		font-size: 2.5rem;
 	}
 }
 
-@media (min-width: 880px){
+@media (min-width: 880px) {
 	.iframeContainer {
 		display: none;
 	}
-	.iframeResponsive{
+	.iframeResponsive {
 		display: none;
 	}
-	.iframeDesktop{
+	.iframeDesktop {
 		display: block;
 	}
-
-
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-	// .info {
-	// 	margin-top: -5%;
-	// }
+	.title {
+		font-size: 6rem;
+	}
 }
 
 // X-Large devices (large desktops, 1200px and up)

@@ -6,7 +6,7 @@ import SEO from "../components/seo";
 import FullBackground from "../components/imageComponents/backgroundImage";
 import ContactForm from "../components/contactForm";
 
-import { FaAngleDown} from "@react-icons/all-files/fa/FaAngleDown";
+import { FaAngleDown } from "@react-icons/all-files/fa/FaAngleDown";
 
 import "../main.scss";
 import indexStyle from "./index.module.scss";
@@ -18,7 +18,10 @@ const IndexPage = () => {
 			<SEO id="top" title="Home" />
 			<section>
 				<div className={indexStyle.introSection}>
-					<h1 className={`${indexStyle.title} align-center`}>Alex Carr</h1>
+					<div className={indexStyle.titleWrapper}>
+						<h1 className={`${indexStyle.title} align-center`}>Alex Carr</h1>
+						<p className={indexStyle.subTitle}>Scoring, Production, Performance</p>
+					</div>
 					<div className={`${indexStyle.iframeContainer} align-center`}>
 						<iframe
 							title="index-vid"
@@ -33,8 +36,8 @@ const IndexPage = () => {
 						<iframe
 							title="index-vid"
 							className={indexStyle.iframeFullSize}
-							width='840'
-							height='472'
+							width="840"
+							height="472"
 							src="https://www.youtube.com/embed/fIidcLH2Xeo"
 							frameBorder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -51,9 +54,7 @@ const IndexPage = () => {
 					</div>
 				</div>
 
-				<div
-					className={indexStyle.bioSection}
-				>
+				<div className={indexStyle.bioSection}>
 					<div className="pageContainer">
 						<div id="scroll-about">
 							<h2 className={`${indexStyle.sectionTitle}`}>Bio</h2>
@@ -73,11 +74,9 @@ const IndexPage = () => {
 					<div id="scroll-projects">
 						<h2 className={`${indexStyle.sectionTitle}`}>Featured Works</h2>
 					</div>
-					<div className={indexStyle.projectsWrapper}></div>
-				</div >
-				<div
-					className={indexStyle.contactSection}
-				>
+					<div className={indexStyle.projectsWrapper} />
+				</div>
+				<div className={indexStyle.contactSection}>
 					<div className="pageContainer">
 						<div id="scroll-contact">
 							<h2 className={`${indexStyle.sectionTitle} text-center`}>Contact Me</h2>
