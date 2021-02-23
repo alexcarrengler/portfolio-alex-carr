@@ -4,6 +4,7 @@ import scrollTo from "gatsby-plugin-smoothscroll";
 
 import SEO from "../components/seo";
 import FullBackground from "../components/imageComponents/backgroundImage";
+import SocialLinks from "../components/socialLinks";
 import ContactForm from "../components/contactForm";
 
 import { FaAngleDown } from "@react-icons/all-files/fa/FaAngleDown";
@@ -68,6 +69,7 @@ const IndexPage = () => {
 							nulla porttitor massa id neque. Condimentum id venenatis a condimentum vitae sapien
 							pellentesque habitant.
 						</p>
+						{/* <SocialLinks /> */}
 					</div>
 				</div>
 				<div className={indexStyle.projectsSection}>
