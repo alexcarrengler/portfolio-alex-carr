@@ -64,7 +64,7 @@
 	height: 100vh;
 	width: 70vw;
 	z-index: 1000;
-	background-color: black;
+	background-color: rgb(157, 183, 223);
 	margin-right: -70vw;
 	border-left: 3px solid white;
 }
@@ -242,9 +242,7 @@
 		height: 100vh;
 		width: 30vw;
 		z-index: 1000;
-		background-color: black;
 		margin-right: -30vw;
-		border-left: 3px solid white;
 	}
 	.navOpen {
 		margin-right: 0;

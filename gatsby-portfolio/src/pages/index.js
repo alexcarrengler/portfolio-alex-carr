@@ -17,7 +17,7 @@ const IndexPage = () => {
 		<div>
 			<SEO id="top" title="Home" />
 			<section>
-				<FullBackground className={backgroundImageStyle.componentFlex}>
+				<div className={indexStyle.introSection}>
 					<h1 className={`${indexStyle.title} align-center`}>Alex Carr</h1>
 					<div className={`${indexStyle.iframeContainer} align-center`}>
 						<iframe
@@ -49,10 +49,10 @@ const IndexPage = () => {
 						<h3 className={`${indexStyle.info} align-center`}>See More</h3>
 						<FaAngleDown className={`${indexStyle.infoIcon} align-center`} />
 					</div>
-				</FullBackground>
+				</div>
 
-				<FullBackground
-					className={`${backgroundImageStyle.componentBlock} ${backgroundImageStyle.colorInverse}`}
+				<div
+					className={indexStyle.bioSection}
 				>
 					<div className="pageContainer">
 						<div id="scroll-about">
@@ -68,15 +68,15 @@ const IndexPage = () => {
 							pellentesque habitant.
 						</p>
 					</div>
-				</FullBackground>
-				<FullBackground className={`${backgroundImageStyle.componentBlock} ${backgroundImageStyle.colorRotate2}`}>
+				</div>
+				<div className={indexStyle.projectsSection}>
 					<div id="scroll-projects">
 						<h2 className={`${indexStyle.sectionTitle}`}>Featured Works</h2>
 					</div>
 					<div className={indexStyle.projectsWrapper}></div>
-				</FullBackground >
-				<FullBackground
-					className={`${backgroundImageStyle.componentFlex} ${backgroundImageStyle.colorRotate}`}
+				</div >
+				<div
+					className={indexStyle.contactSection}
 				>
 					<div className="pageContainer">
 						<div id="scroll-contact">
@@ -86,7 +86,7 @@ const IndexPage = () => {
 							<ContactForm />
 						</div>
 					</div>
-				</FullBackground>
+				</div>
 			</section>
 		</div>
 	);

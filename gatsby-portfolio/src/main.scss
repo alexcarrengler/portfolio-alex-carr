@@ -2,24 +2,42 @@
 @import '~sanitize.css/forms.css';
 @import '~sanitize.css/typography.css';
 
-$header-shadow: 0px 4px 3px rgba(0, 0, 0, 0.632),
-             0px 8px 13px rgba(0, 0, 0, 0.317),
-             0px 18px 23px rgba(0, 0, 0, 0.297);
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=EB+Garamond&family=Poiret+One&family=Rajdhani&family=Shippori+Mincho&display=swap');
+
+// font-family: 'Abel', sans-serif;
+// font-family: 'EB Garamond', serif;
+// font-family: 'Poiret One', cursive;
+// font-family: 'Rajdhani', sans-serif;
+// font-family: 'Shippori Mincho', serif;
+
+
+$header-shadow: 1px 2px 2px rgba(0, 0, 0, 0.632);
+$font1: 'Shippori Mincho', serif;
+$font0: 'Rajdhani', sans-serif;
+$font2: 'Abel', sans-serif;
 
 body{
     color: white;
+    font-family: $font2;
 }
 
 h1{
-   text-shadow: $header-shadow; 
-}
-
-h3{
-   text-shadow: $header-shadow; 
+   text-shadow: $header-shadow;
+   font-family:$font0; 
 }
 
 h2 {
     font-size: 2.5rem;
+    text-shadow: $header-shadow;
+    font-family:$font1; 
+}
+
+h3{
+   text-shadow: $header-shadow;
+   font-family:$font2;  
+}
+
+svg{
     text-shadow: $header-shadow;
 }
 
