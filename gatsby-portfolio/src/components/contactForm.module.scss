@@ -43,20 +43,18 @@ textarea {
 
 [type="submit"] {
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  width: 100%;
-  background:white;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  background-color:black !important;
   border-radius:5px;
-  border:0;
+  border:3px solid white;
   cursor:pointer;
-  color:black;
+  color:white;
   font-size:24px;
-  padding-top:10px;
+  padding-top:8px;
   padding-bottom:10px;
-  transition: all 0.3s;
-  margin-top:-4px;
-  font-weight:700;
 }
-[type="submit"]:hover { background:white; }
 
 // X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap

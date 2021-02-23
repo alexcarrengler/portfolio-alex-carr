@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {Link} from "gatsby";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import { FaAngleUp } from "@react-icons/all-files/fa/FaAngleUp";
+import { FaHome } from "@react-icons/all-files/fa/FaHome";
 
 import navImg from "../images/navbar-img.png";
 // import {Link} from "gatsby"
@@ -12,7 +13,7 @@ export default function Header() {
 
 	const toggleOverlay = () => {
 		setToggled((toggled) => {
-			console.log("toggled");
+			// console.log("toggled");
 			return !toggled;
 		});
 	}
@@ -24,10 +25,17 @@ export default function Header() {
 				<div className={
 							toggled ? `${headerStyle.navSlider} ${headerStyle.navOpen}` : `${headerStyle.navSlider}`
 						}>
-					<ul className={headerStyle.navLinks}>
-						<li><Link onClick={toggleOverlay} className={headerStyle.navLink} to="/">Home</Link></li>
-						<li><Link onClick={toggleOverlay} className={headerStyle.navLink} to="#scroll-about">About</Link></li>
-						<li><Link onClick={toggleOverlay} className={headerStyle.navLink} to="#scroll-contact">Contact</Link></li>
+					<ul className={headerStyle.navLinks} style={{borderBottom: `3px solid white`}}>
+						<li className={headerStyle.listItem}><Link onClick={toggleOverlay} className={headerStyle.navLink} to="/"><FaHome/></Link></li>
+						<li className={headerStyle.listItem}><Link onClick={toggleOverlay} className={headerStyle.navLink} to="/#scroll-about">Bio</Link></li>
+						<li className={headerStyle.listItem}><Link onClick={toggleOverlay} className={headerStyle.navLink} to="/#scroll-projects">Featured Works</Link></li>
+						<li className={headerStyle.listItem}><Link onClick={toggleOverlay} className={headerStyle.navLink} to="/#scroll-contact">Contact</Link></li>
+					</ul>
+					{/* <h4 className={headerStyle.navLabelWrapper}><span className={headerStyle.navLabel}>Portfolio</span></h4> */}
+					<ul className={headerStyle.navLinks} style={{marginTop: `8px`}}>
+						<li className={headerStyle.listItem}><Link onClick={toggleOverlay} className={headerStyle.navLink} to="/scoring">Scoring</Link></li>
+						<li className={headerStyle.listItem}><Link onClick={toggleOverlay} className={headerStyle.navLink} to="/production">Production</Link></li>
+						<li className={headerStyle.listItem}><Link onClick={toggleOverlay} className={headerStyle.navLink} to="/performing">Performing</Link></li>
 					</ul>	
 				</div>
 				<nav className={headerStyle.nav}>

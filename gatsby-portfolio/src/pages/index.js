@@ -6,7 +6,7 @@ import SEO from "../components/seo";
 import FullBackground from "../components/imageComponents/backgroundImage";
 import ContactForm from "../components/contactForm";
 
-import { FaAngleDown } from "@react-icons/all-files/fa/FaAngleDown";
+import { FaAngleDown} from "@react-icons/all-files/fa/FaAngleDown";
 
 import "../main.scss";
 import indexStyle from "./index.module.scss";
@@ -56,7 +56,7 @@ const IndexPage = () => {
 				>
 					<div className="pageContainer">
 						<div id="scroll-about">
-							<h2 className={`${indexStyle.sectionTitle}`}>Hello!</h2>
+							<h2 className={`${indexStyle.sectionTitle}`}>Bio</h2>
 						</div>
 						<p className={indexStyle.aboutText}>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -72,18 +72,18 @@ const IndexPage = () => {
 						</p>
 					</div>
 				</FullBackground>
-				{/* <FullBackground className={`${backgroundImageStyle.componentBlock} ${backgroundImageStyle.colorRotate2}`}>
+				<FullBackground className={`${backgroundImageStyle.componentBlock} ${backgroundImageStyle.colorRotate2}`}>
 					<div id="scroll-projects">
-						<h2 className={`${indexStyle.sectionTitle}`}>Projects</h2>
+						<h2 className={`${indexStyle.sectionTitle}`}>Featured Works</h2>
 					</div>
 					<div className={indexStyle.projectsWrapper}></div>
-				</FullBackground > */}
+				</FullBackground >
 				<FullBackground
 					className={`${backgroundImageStyle.componentFlex} ${backgroundImageStyle.colorRotate}`}
 				>
 					<div className="pageContainer">
 						<div id="scroll-contact">
-							<h2 className={`${indexStyle.sectionTitle} text-center`}>Message Me</h2>
+							<h2 className={`${indexStyle.sectionTitle} text-center`}>Contact Me</h2>
 						</div>
 						<div>
 							<ContactForm />
