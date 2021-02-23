@@ -55,10 +55,10 @@ const IndexPage = () => {
 					</div>
 				</div>
 
-				<div className={indexStyle.bioSection}>
+				<div id="scroll-about" className={indexStyle.bioSection} >
 					<div className="pageContainer">
-						<div id="scroll-about">
-							<h2 className={`${indexStyle.sectionTitle}`}>Bio</h2>
+						<div>
+							<h2 className={`${indexStyle.sectionTitle} ${indexStyle.bioSectionTitle}`}>Bio</h2>
 						</div>
 						<p className={indexStyle.aboutText}>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -66,6 +66,8 @@ const IndexPage = () => {
 							integer quis auctor elit sed vulputate mi sit. Sit amet massa vitae tortor. Pretium aenean
 							pharetra magna ac placerat vestibulum lectus mauris ultrices. Vitae suscipit tellus mauris a
 							diam maecenas sed enim. Faucibus ornare suspendisse sed nisi lacus. Leo duis ut diam quam
+							nulla porttitor massa id neque. Condimentum id venenatis a condimentum vitae sapien
+							pellentesque habitant.diam maecenas sed enim. Faucibus ornare suspendisse sed nisi lacus. Leo duis ut diam quam
 							nulla porttitor massa id neque. Condimentum id venenatis a condimentum vitae sapien
 							pellentesque habitant.
 						</p>
@@ -78,10 +80,10 @@ const IndexPage = () => {
 					</div>
 					<div className={indexStyle.projectsWrapper} />
 				</div>
-				<div className={indexStyle.contactSection}>
+				<div id="scroll-contact" className={indexStyle.contactSection}>
 					<div className="pageContainer">
-						<div id="scroll-contact">
-							<h2 className={`${indexStyle.sectionTitle} text-center`}>Contact Me</h2>
+						<div>
+							<h2 className={`${indexStyle.sectionTitle} ${indexStyle.bioSectionTitle}`}>Contact Me</h2>
 						</div>
 						<div>
 							<ContactForm />
