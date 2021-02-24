@@ -6,6 +6,7 @@ import SEO from "../components/seo";
 import FullBackground from "../components/imageComponents/backgroundImage";
 import SocialLinks from "../components/socialLinks";
 import ContactForm from "../components/contactForm";
+import Footer from "../components/footer";
 
 import { FaAngleDown } from "@react-icons/all-files/fa/FaAngleDown";
 
@@ -90,7 +91,9 @@ const IndexPage = () => {
 						</div>
 					</div>
 				</div>
+				<Footer />
 			</section>
+			
 		</div>
 	);
 };
