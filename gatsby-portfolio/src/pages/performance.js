@@ -3,12 +3,12 @@ import { Link } from "gatsby"
 
 import SEO from "../components/seo"
 
-const Scoring = () => (
+const Performance = () => (
   <>
-    <SEO title="Scoring" />
-    <h1>Scoring</h1>
+    <SEO title="Performance" />
+    <h1>Performance</h1>
     <Link to="/">Go back to the homepage</Link>
   </>
 )
 
-export default Scoring
+export default Performance

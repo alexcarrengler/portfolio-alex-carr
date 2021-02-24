@@ -34,7 +34,7 @@ export default function Header() {
 					<ul className={headerStyle.navLinks} style={{marginTop: `8px`}}>
 						<li className={headerStyle.listItem}><Link onClick={toggleOverlay} className={headerStyle.navLink} to="/scoring">Scoring</Link></li>
 						<li className={headerStyle.listItem}><Link onClick={toggleOverlay} className={headerStyle.navLink} to="/production">Production</Link></li>
-						<li className={headerStyle.listItem}><Link onClick={toggleOverlay} className={headerStyle.navLink} to="/performing">Performing</Link></li>
+						<li className={headerStyle.listItem}><Link onClick={toggleOverlay} className={headerStyle.navLink} to="/performance">Performance</Link></li>
 					</ul>	
 				</div>
 				<nav className={headerStyle.nav}>
