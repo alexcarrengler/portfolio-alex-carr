@@ -12,10 +12,10 @@ import TestImage from "../images/thumbnails/scoring/000_scoring-th.png";
 const projects = [
 	{
 		link: ``,
-    thumbnailTitle: `project1`,
-    thumbnailImage: `${TestImage}`,
-    title: `The Grove`,
-    image: `${TestImage}`,
+		thumbnailTitle: `project1`,
+		thumbnailImage: `${TestImage}`,
+		title: `The Grove`,
+		image: `${TestImage}`,
 		credits: `Will Kahn, Alex Carr`,
 		projectDescription: ``,
 		personalDescription: ``
@@ -25,9 +25,9 @@ const projects = [
 const Scoring = () => {
 	const posts = projects.map((p) => (
 		<div className={`${projectsStyles.projectWrapper}`}>
-			<Link to={`/post`} state={{post: p}} className={`${projectsStyles.projectLink}`}>
+			<Link to={`/`} state={{ post: p }} className={`${projectsStyles.projectLink}`}>
 				<img className={projectsStyles.thumbnail} src={p.thumbnailImage} />
-        <p className={projectsStyles.projectTitle}>{p.thumbnailTitle}</p>
+				<p className={projectsStyles.projectTitle}>{p.thumbnailTitle}</p>
 			</Link>
 		</div>
 	));
@@ -38,9 +38,7 @@ const Scoring = () => {
 			<section>
 				<h1 className={`${pageStyles.title} ${projectsStyles.pageTitle}`}>Scoring</h1>
 				<div className={`${projectsStyles.projectsContainer}`}>
-					<div className={`${projectsStyles.projectWrapper}`}>
-            {posts}
-					</div>
+					<div className={`${projectsStyles.projectWrapper}`}>{posts}</div>
 				</div>
 			</section>
 		</div>
