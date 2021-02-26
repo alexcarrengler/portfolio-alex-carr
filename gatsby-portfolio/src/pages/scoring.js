@@ -9,13 +9,11 @@ import projectsStyles from "./projects.module.scss";
 
 import TestImage from "../images/thumbnails/scoring/000_scoring-th.png";
 
-const projects = [];
-
 const Scoring = ({data}) => {
 	const projects = data.allMarkdownRemark.edges
 	// console.log(projects);
 	const posts = projects.map((p) => (
-		<div className={`${projectsStyles.projectWrapper}`}>
+		<div key={p.node.frontmatter.title} className={`${projectsStyles.projectWrapper}`}>
 			<Link to={`/`} className={`${projectsStyles.projectLink}`}>
 				<img className={projectsStyles.thumbnail} src={TestImage} />
 				<p className={projectsStyles.projectTitle}>{p.node.frontmatter.title}</p>
