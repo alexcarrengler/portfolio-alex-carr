@@ -8,26 +8,29 @@ public_folder: /img
 collections:
   - name: 'scoring'
     label: 'Scoring'
+    label_singular: 'Post'
     folder: 'gatsby-portfolio/content/scoring'
     create: true
-    slug: 'index'
+    slug: '{{slug}}'
     media_folder: ''
     public_folder: ''
-    path: '{{title}}/index'
+    path: '{{title}}/{{slug}}'
     editor:
       preview: false
     fields:
+      -
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'production'
     label: 'Production'
+    label_singular: 'Post'
     folder: 'gatsby-portfolio/content/production'
     create: true
-    slug: 'index'
+    slug: '{{slug}}'
     media_folder: ''
     public_folder: ''
-    path: '{{title}}/index'
+    path: '{{title}}/{{slug}}'
     editor:
       preview: false
     fields:

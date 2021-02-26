@@ -13,8 +13,7 @@ const projects = [];
 
 const Scoring = ({data}) => {
 	const projects = data.allMarkdownRemark.edges
-	console.log(projects);
-
+	// console.log(projects);
 	const posts = projects.map((p) => (
 		<div className={`${projectsStyles.projectWrapper}`}>
 			<Link to={`/`} className={`${projectsStyles.projectLink}`}>
