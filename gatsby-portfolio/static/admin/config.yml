@@ -6,9 +6,23 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'posts'
-    label: 'Posts'
-    folder: 'gatsby-portfolio/content/posts'
+  - name: 'scoring'
+    label: 'Scoring'
+    folder: 'gatsby-portfolio/content/scoring'
+    create: true
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'production'
+    label: 'Production'
+    folder: 'gatsby-portfolio/content/production'
     create: true
     slug: 'index'
     media_folder: ''

@@ -17,6 +17,7 @@
     "gatsby-plugin-sharp": "^2.8.0",
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-source-filesystem": "^2.5.0",
+    "gatsby-transformer-remark": "^2.16.1",
     "gatsby-transformer-sharp": "^2.6.0",
     "netlify-cms-app": "^2.14.26",
     "node-sass": "^5.0.0",
