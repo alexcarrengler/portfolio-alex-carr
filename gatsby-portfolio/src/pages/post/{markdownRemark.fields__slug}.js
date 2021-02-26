@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function PostTemplate({ data }) {
-	console.log("post data!!!!!!!!", data);
 	return (
 		<div>
 			<h1>Post Template</h1>
