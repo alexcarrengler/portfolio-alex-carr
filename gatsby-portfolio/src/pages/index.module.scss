@@ -70,7 +70,8 @@
 }
 
 .iframeResponsive {
-	border: 3px solid white;
+	// border: 3px solid white;
+	border: none;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -87,7 +88,9 @@
 }
 
 .iframeFullSize {
-	border: 3px solid white;
+	// border: 3px solid white;
+	border: none;
+	border-radius: 10px;
 }
 
 .seeMoreWrapper {
