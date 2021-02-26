@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 
 import SEO from "../components/seo";
 
@@ -9,25 +9,17 @@ import projectsStyles from "./projects.module.scss";
 
 import TestImage from "../images/thumbnails/scoring/000_scoring-th.png";
 
-const projects = [
-	{
-		link: ``,
-		thumbnailTitle: `project1`,
-		thumbnailImage: `${TestImage}`,
-		title: `The Grove`,
-		image: `${TestImage}`,
-		credits: `Will Kahn, Alex Carr`,
-		projectDescription: ``,
-		personalDescription: ``
-	}
-];
+const projects = [];
 
-const Scoring = () => {
+const Scoring = ({data}) => {
+	const projects = data.allMarkdownRemark.edges
+	console.log(projects);
+
 	const posts = projects.map((p) => (
 		<div className={`${projectsStyles.projectWrapper}`}>
-			<Link to={`/`} state={{ post: p }} className={`${projectsStyles.projectLink}`}>
-				<img className={projectsStyles.thumbnail} src={p.thumbnailImage} />
-				<p className={projectsStyles.projectTitle}>{p.thumbnailTitle}</p>
+			<Link to={`/`} className={`${projectsStyles.projectLink}`}>
+				<img className={projectsStyles.thumbnail} src={TestImage} />
+				<p className={projectsStyles.projectTitle}>{p.node.frontmatter.title}</p>
 			</Link>
 		</div>
 	));
@@ -38,11 +30,26 @@ const Scoring = () => {
 			<section>
 				<h1 className={`${pageStyles.title} ${projectsStyles.pageTitle}`}>Scoring</h1>
 				<div className={`${projectsStyles.projectsContainer}`}>
-					<div className={`${projectsStyles.projectWrapper}`}>{posts}</div>
+					{posts}
 				</div>
 			</section>
 		</div>
 	);
 };
+
+export const cmsPosts = graphql`
+	query MyQuery {
+		allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(scoring)/" } }) {
+			edges {
+				node {
+					frontmatter {
+						title
+						description
+					}
+				}
+			}
+		}
+	}
+`;
 
 export default Scoring;
