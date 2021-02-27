@@ -1,14 +1,17 @@
 import React from "react";
 import { graphql } from "gatsby";
+import Img from "gatsby-image"
 
 export default function PostTemplate({ data }) {
-	console.log(data);
-	const imgFiles = data.allFile.edges.filter(edge => edge.node.extension !== 'md');
+	const imgFiles = data.allFile.edges.filter((edge) => edge.node.extension !== "md");
 	console.log("imgfiles", imgFiles);
 	const post = data.markdownRemark;
 	return (
 		<div>
 			<h1>{post.frontmatter.title}</h1>
+			{imgFiles.map(file => (
+				<Img fluid={file.node.childImageSharp.fluid} style={{width:`50%`}}/>
+			))}
 			<p>{post.internal.content}</p>
 		</div>
 	);
@@ -28,8 +31,13 @@ export const query = graphql`
 			edges {
 				node {
 					id
-					name
 					extension
+					relativePath
+					childImageSharp {
+						fluid(quality: 100) {
+							...GatsbyImageSharpFluid
+						}
+					}
 				}
 			}
 		}
