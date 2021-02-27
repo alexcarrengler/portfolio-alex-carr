@@ -10,6 +10,9 @@ import Footer from "../components/footer";
 
 import { FaAngleDown } from "@react-icons/all-files/fa/FaAngleDown";
 
+//cms content
+import IntroContent from "../../site/home-page/intro-section.json";
+
 import "../main.scss";
 import indexStyle from "./index.module.scss";
 import backgroundImageStyle from "../components/imageComponents/backgroundImage.module.scss";
@@ -21,14 +24,14 @@ const IndexPage = () => {
 			<section>
 				<div className={indexStyle.introSection}>
 					<div className={indexStyle.titleWrapper}>
-						<h1 className={`${indexStyle.title} align-center`}>Alex Carr</h1>
-						<p className={indexStyle.subTitle}>Scoring, Production, Performance</p>
+						<h1 className={`${indexStyle.title} align-center`}>{IntroContent.site_title}</h1>
+						<p className={indexStyle.subTitle}>{IntroContent.site_subtitle}</p>
 					</div>
 					<div className={`${indexStyle.iframeContainer} align-center`}>
 						<iframe
 							title="index-vid"
 							className={indexStyle.iframeResponsive}
-							src="https://www.youtube.com/embed/fIidcLH2Xeo"
+							src={IntroContent.intro_video_src}
 							frameBorder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 							allowFullScreen
@@ -56,7 +59,7 @@ const IndexPage = () => {
 					</div>
 				</div>
 
-				<div id="scroll-about" className={indexStyle.bioSection} >
+				<div id="scroll-about" className={indexStyle.bioSection}>
 					<div className="pageContainer">
 						<div>
 							<h2 className={`${indexStyle.sectionTitle} ${indexStyle.bioSectionTitle}`}>Bio</h2>
@@ -68,9 +71,9 @@ const IndexPage = () => {
 							pharetra magna ac placerat vestibulum lectus mauris ultrices. Vitae suscipit tellus mauris a
 							diam maecenas sed enim. Faucibus ornare suspendisse sed nisi lacus. Leo duis ut diam quam
 							nulla porttitor massa id neque. Condimentum id venenatis a condimentum vitae sapien
-							pellentesque habitant.diam maecenas sed enim. Faucibus ornare suspendisse sed nisi lacus. Leo duis ut diam quam
-							nulla porttitor massa id neque. Condimentum id venenatis a condimentum vitae sapien
-							pellentesque habitant.
+							pellentesque habitant.diam maecenas sed enim. Faucibus ornare suspendisse sed nisi lacus.
+							Leo duis ut diam quam nulla porttitor massa id neque. Condimentum id venenatis a condimentum
+							vitae sapien pellentesque habitant.
 						</p>
 						{/* <SocialLinks /> */}
 					</div>
@@ -93,7 +96,6 @@ const IndexPage = () => {
 				</div>
 				<Footer />
 			</section>
-			
 		</div>
 	);
 };

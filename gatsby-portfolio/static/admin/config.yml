@@ -36,3 +36,13 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'home_page'
+    label: 'Home Page'
+    files:
+      - name: 'intro_section'
+        label: 'Intro Section'
+        file: 'gatsby-portfolio/site/home-page/intro-section.json'
+        fields: 
+          - { label: 'Site Title', name: 'site_title', widget: 'string' }
+          - { label: 'Site Subtitle', name: 'site_subtitle', widget: 'string' }
+          - { label: 'Video Link', name: 'intro_video_src', widget: 'string' }
