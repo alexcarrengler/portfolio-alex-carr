@@ -18,8 +18,15 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
-				name: `content`,
-				path: `${__dirname}/content`
+				name: `scoring`,
+				path: `${__dirname}/content/scoring`
+			}
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `scoring`,
+				path: `${__dirname}/content/production`
 			}
 		},
 		`gatsby-transformer-sharp`,
