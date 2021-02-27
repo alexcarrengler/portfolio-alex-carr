@@ -21,6 +21,10 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Post Image'
+        name: 'post_image'
+        widget: 'image'
+        required: false
   - name: 'production'
     label: 'Production'
     label_singular: 'Post'
