@@ -12,6 +12,7 @@ import { FaAngleDown } from "@react-icons/all-files/fa/FaAngleDown";
 
 //cms content
 import IntroContent from "../../site/home-page/intro-section.json";
+import BioContent from "../../site/home-page/bio-section.json";
 
 import "../main.scss";
 import indexStyle from "./index.module.scss";
@@ -43,7 +44,7 @@ const IndexPage = () => {
 							className={indexStyle.iframeFullSize}
 							width="840"
 							height="472"
-							src="https://www.youtube.com/embed/fIidcLH2Xeo"
+							src={IntroContent.intro_video_src}
 							frameBorder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 							allowFullScreen
@@ -62,11 +63,11 @@ const IndexPage = () => {
 				<div id="scroll-about" className={indexStyle.bioSection}>
 					<div className="pageContainer">
 						<div>
-							<h2 className={`${indexStyle.sectionTitle} ${indexStyle.bioSectionTitle}`}>Bio</h2>
+							<h2 className={`${indexStyle.sectionTitle} ${indexStyle.bioSectionTitle}`}>
+								{BioContent.section_title}
+							</h2>
 						</div>
-						<p className={indexStyle.aboutText}>
-							
-						</p>
+						<p className={indexStyle.aboutText}>{BioContent.bio_text}</p>
 						{/* <SocialLinks /> */}
 					</div>
 				</div>
