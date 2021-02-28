@@ -29,6 +29,13 @@ module.exports = {
 				path: `${__dirname}/content/production`
 			}
 		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `scoring`,
+				path: `${__dirname}/content/performance`
+			}
+		},
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
 		{

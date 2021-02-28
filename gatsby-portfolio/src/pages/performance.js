@@ -21,11 +21,14 @@ const Performance = ({ data }) => {
 	));
 
 	return (
-		<div className={projectsStyles.page} style={{ backgroundColor: `rgb(172, 196, 196)` }}>
+		<div className={projectsStyles.page} style={{ backgroundColor: `rgb(176, 178, 206)` }}>
 			<SEO id="top" title="Performance" />
 			<section>
 				<h1 className={`${pageStyles.title} ${projectsStyles.pageTitle}`}>Performance</h1>
-				<div className={`${projectsStyles.projectsContainer}`}>{posts}</div>
+				<div className={`${projectsStyles.projectsContainer}`}>
+          {posts}
+          {posts.length % 2 === 0 ? <></> : <div className={`${projectsStyles.projectWrapper}`}></div>}
+        </div>
 			</section>
 		</div>
 	);

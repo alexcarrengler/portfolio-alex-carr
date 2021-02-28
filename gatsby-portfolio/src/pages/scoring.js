@@ -25,7 +25,10 @@ const Scoring = ({ data }) => {
 			<SEO id="top" title="Scoring" />
 			<section>
 				<h1 className={`${pageStyles.title} ${projectsStyles.pageTitle}`}>Scoring</h1>
-				<div className={`${projectsStyles.projectsContainer}`}>{posts}</div>
+				<div className={`${projectsStyles.projectsContainer}`}>
+					{posts}
+					{posts.length % 2 === 0 ? <></> : <div className={`${projectsStyles.projectWrapper}`}></div>}
+				</div>
 			</section>
 		</div>
 	);
