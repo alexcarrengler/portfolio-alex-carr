@@ -24,7 +24,6 @@ collections:
       - label: 'Post Image'
         name: 'post_image'
         widget: 'image'
-        required: false
   - name: 'production'
     label: 'Production'
     label_singular: 'Post'
@@ -43,7 +42,24 @@ collections:
       - label: 'Post Image'
         name: 'post_image'
         widget: 'image'
-        required: false
+  - name: 'performance'
+    label: 'Performance'
+    label_singular: 'Post'
+    folder: 'gatsby-portfolio/content/performance'
+    create: true
+    slug: '{{slug}}'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Post Image'
+        name: 'post_image'
+        widget: 'image'
   - name: 'home_page'
     label: 'Home Page'
     files:

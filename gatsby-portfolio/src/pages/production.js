@@ -1,14 +1,60 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import Img from "gatsby-image";
 
-import SEO from "../components/seo"
+import SEO from "../components/seo";
 
-const Production = () => (
-  <>
-    <SEO title="Production" />
-    <h1>Production</h1>
-    <Link to="/">Go back to the homepage</Link>
-  </>
-)
+import "../main.scss";
+import pageStyles from "./index.module.scss";
+import projectsStyles from "./projects.module.scss";
 
-export default Production
+
+const Production = ({ data }) => {
+	const projects = data.allMarkdownRemark.edges;
+	console.log(projects);
+	const posts = projects.map((p) => (
+		<div key={p.node.frontmatter.title} className={`${projectsStyles.projectWrapper}`}>
+			<Link to={`/post/${p.node.fields.slug}`} className={`${projectsStyles.projectLink}`}>
+				<Img fluid={p.node.frontmatter.post_image.childImageSharp.fluid} className={projectsStyles.thumbnail} />
+				<p className={projectsStyles.projectTitle}>{p.node.frontmatter.title}</p>
+			</Link>
+		</div>
+	));
+
+	return (
+		<div className={projectsStyles.page} style={{ backgroundColor: `rgb(176, 178, 206)` }}>
+			<SEO id="top" title="Production" />
+			<section>
+				<h1 className={`${pageStyles.title} ${projectsStyles.pageTitle}`}>Production</h1>
+				<div className={`${projectsStyles.projectsContainer}`}>{posts}</div>
+			</section>
+		</div>
+	);
+};
+
+export const productionPosts = graphql`
+	query productionQuery {
+		allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(production)/" } }) {
+			edges {
+				node {
+					frontmatter {
+						title
+						description
+						post_image {
+							childImageSharp {
+								fluid(quality: 100) {
+									...GatsbyImageSharpFluid
+								}
+							}
+						}
+					}
+					fields {
+						slug
+					}
+				}
+			}
+		}
+	}
+`;
+
+export default Production;

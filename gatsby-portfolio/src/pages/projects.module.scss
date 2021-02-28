@@ -27,15 +27,21 @@
 }
 
 .thumbnail {
-	width: 100%;
+	margin: auto;
+	width: 300px;
+	height: 300px;
     border-radius: 50%;
     cursor: pointer;
 }
 
 .projectTitle {
 	text-align: center;
-    color: black;
+    color: inherit;
     cursor: pointer;
+}
+
+.projectLink{
+	color: black;
 }
 
 
