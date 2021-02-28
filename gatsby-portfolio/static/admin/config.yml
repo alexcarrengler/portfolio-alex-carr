@@ -70,7 +70,7 @@ collections:
           - { label: 'Site Title', name: 'site_title', widget: 'string' }
           - { label: 'Site Subtitle', name: 'site_subtitle', widget: 'string' }
           - { label: 'Video Link', name: 'intro_video_src', widget: 'string' }
-      - name: 'bit_section'
+      - name: 'bio_section'
         label: 'Bio Section'
         file: 'gatsby-portfolio/site/home-page/bio-section.json'
         fields: 
