@@ -19,7 +19,8 @@ collections:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Link', name: link, widget: 'string'}
+      - { label: 'Source Link', name: source_link, widget: 'string'}
+      - { label: 'Embeded Link', name: 'embeded_link', widget: 'string'}
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Post Image'
         name: 'post_image'
@@ -37,7 +38,8 @@ collections:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Link', name: link, widget: 'string'}
+      - { label: 'Source Link', name: source_link, widget: 'string'}
+      - { label: 'Embeded Link', name: 'embeded_link', widget: 'string', required: false}
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Post Image'
         name: 'post_image'
@@ -55,7 +57,8 @@ collections:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Link', name: link, widget: 'string'}
+      - { label: 'Source Link', name: source_link, widget: 'string'}
+      - { label: 'Embeded Link', name: 'embeded_link', widget: 'string', required: false}
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Post Image'
         name: 'post_image'
