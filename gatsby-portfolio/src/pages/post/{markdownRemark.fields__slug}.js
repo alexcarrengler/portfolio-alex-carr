@@ -25,6 +25,7 @@ export const query = graphql`
 		markdownRemark(fields: { slug: { eq: $fields__slug } }) {
 			frontmatter {
 				title
+				link
 			}
 			internal {
 				content

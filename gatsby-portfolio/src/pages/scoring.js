@@ -40,7 +40,6 @@ export const scoringPosts = graphql`
 				node {
 					frontmatter {
 						title
-						description
 						post_image {
 							childImageSharp {
 								fluid{

@@ -19,7 +19,7 @@ collections:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Link', name: link, widget: 'string'}
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Post Image'
         name: 'post_image'
@@ -37,7 +37,7 @@ collections:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Link', name: link, widget: 'string'}
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Post Image'
         name: 'post_image'
@@ -55,7 +55,7 @@ collections:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Link', name: link, widget: 'string'}
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Post Image'
         name: 'post_image'

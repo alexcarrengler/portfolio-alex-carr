@@ -41,7 +41,6 @@ export const productionPosts = graphql`
 				node {
 					frontmatter {
 						title
-						description
 						post_image {
 							childImageSharp {
 								fluid{
