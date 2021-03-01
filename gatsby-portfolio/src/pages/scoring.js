@@ -43,7 +43,7 @@ export const scoringPosts = graphql`
 						description
 						post_image {
 							childImageSharp {
-								fluid(quality: 100) {
+								fluid{
 									...GatsbyImageSharpFluid
 								}
 							}

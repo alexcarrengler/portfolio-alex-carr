@@ -1,18 +1,22 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Img from "gatsby-image"
+import Img from "gatsby-image";
+
+import postStyles from "./post.module.scss";
+import projectsStyles from "../projects.module.scss";
+import pageStyles from "../index.module.scss";
 
 export default function PostTemplate({ data }) {
 	const imgFiles = data.allFile.edges.filter((edge) => edge.node.extension !== "md");
 	const post = data.markdownRemark;
 	return (
-		<div>
-			<h1>{post.frontmatter.title}</h1>
-			{imgFiles.map(file => (
-				<Img fluid={file.node.childImageSharp.fluid} style={{width:`50%`}}/>
-			))}
-			<p>{post.internal.content}</p>
-		</div>
+		<section>
+			<h1 className={`${pageStyles.title} ${projectsStyles.pageTitle}`}>{post.frontmatter.title}</h1>
+			<div className={`${postStyles.container}`}>
+				{imgFiles.map((file) => <Img key={file.node.id} fluid={file.node.childImageSharp.fluid} className={postStyles.mainImage} />)}
+				<p className={pageStyles.aboutText} style={{maxWidth: `1000px`}}>{post.internal.content}</p>
+			</div>
+		</section>
 	);
 }
 
@@ -33,7 +37,7 @@ export const query = graphql`
 					extension
 					relativePath
 					childImageSharp {
-						fluid(quality: 100) {
+						fluid{
 							...GatsbyImageSharpFluid
 						}
 					}
