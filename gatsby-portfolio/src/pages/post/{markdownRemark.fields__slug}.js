@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 
 export default function PostTemplate({ data }) {
 	const imgFiles = data.allFile.edges.filter((edge) => edge.node.extension !== "md");
-	console.log("imgfiles", imgFiles);
 	const post = data.markdownRemark;
 	return (
 		<div>

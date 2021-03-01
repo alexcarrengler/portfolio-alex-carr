@@ -10,7 +10,6 @@ import projectsStyles from "./projects.module.scss";
 
 const Performance = ({ data }) => {
 	const projects = data.allMarkdownRemark.edges;
-	console.log(projects);
 	const posts = projects.map((p) => (
 		<div key={p.node.frontmatter.title} className={`${projectsStyles.projectWrapper}`}>
 			<Link to={`/post/${p.node.fields.slug}`} className={`${projectsStyles.projectLink}`}>

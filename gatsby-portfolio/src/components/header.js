@@ -12,7 +12,6 @@ export default function Header() {
 
 	const toggleOverlay = () => {
 		setToggled((toggled) => {
-			// console.log("toggled");
 			return !toggled;
 		});
 	}
