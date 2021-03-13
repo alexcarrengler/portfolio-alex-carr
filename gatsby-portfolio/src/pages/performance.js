@@ -26,7 +26,7 @@ const Performance = ({ data }) => {
 				<h1 className={`${pageStyles.title} ${projectsStyles.pageTitle}`}>Performance</h1>
 				<div className={`${projectsStyles.projectsContainer}`}>
           {posts}
-          {posts.length % 2 === 0 ? <></> : <div className={`${projectsStyles.projectWrapper}`}></div>}
+          {posts.length % 2 === 0 ? <></> : <div className={`${projectsStyles.projectWrapper}`} style={{minHeight: `0px`,maxHeight: `0px !important`}}></div>}
         </div>
 			</section>
 		</div>

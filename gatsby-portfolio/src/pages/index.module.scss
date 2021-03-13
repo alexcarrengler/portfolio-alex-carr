@@ -1,6 +1,6 @@
 .introSection {
 	background: rgb(176, 178, 206);
-	background: linear-gradient(0deg, rgb(176, 178, 206) 50%, rgb(172, 196, 196) 50%);
+	background: linear-gradient(0deg, rgb(145, 168, 182) 50%, rgb(172, 196, 196) 50%);
 	width: 100vw;
 	min-height: 100vh;
 	max-height: 100vh;
@@ -10,8 +10,8 @@
 }
 
 .bioSection {
-	background-color: rgb(176, 178, 206);
-	background: linear-gradient(0deg, rgb(145, 168, 182) 50%, rgb(176, 178, 206) 50%);
+	background: rgb(145, 168, 182);
+	background: linear-gradient(0deg, rgb(145, 168, 182) 50%, rgb(145, 168, 182) 50%);
 	width: 100vw;
 	min-height: 100vh;
 	display: flex;
@@ -21,16 +21,17 @@
 }
 
 .projectsSection {
-	background: rgb(145, 168, 182);
-	background: linear-gradient(0deg, rgb(180, 176, 162) 50%, rgb(145, 168, 182) 50%);
+	background-color: rgb(176, 178, 206);
+	background: linear-gradient(0deg, rgb(176, 178, 206) 50%, rgb(176, 178, 206) 50%);
+	
 	width: 100vw;
 	min-height: 100vh;
 	z-index: 0;
 }
 
 .contactSection {
-	background: rgb(180, 176, 162);
-	background: linear-gradient(0deg, rgb(172, 196, 196) 50%, rgb(180, 176, 162) 50%);
+	background: rgb(172, 196, 196);
+	background: linear-gradient(0deg, rgb(172, 196, 196) 50%, rgb(172,196,196) 50%);
 	width: 100vw;
 	min-height: 100vh;
 	display: flex;
@@ -132,7 +133,7 @@
 }
 
 .infoIcon {
-	font-size: clamp(36px, 5vw, 70px);
+	font-size: clamp(36px, 5vw, 56px);
 	opacity: 0;
 	animation: slideDown 1.5s ease-in-out 2s infinite normal none;
 }
@@ -151,6 +152,7 @@
 .sectionTitle {
 	text-align: center;
 	margin: 0;
+	margin-bottom: 16px;
 	padding: 1rem;
 	padding-top: 64px;
 	letter-spacing: 0.15rem;
@@ -163,9 +165,8 @@
 .aboutText {
 	font-size: 1rem;
 	margin: 0 auto;
+	margin-bottom: 48px;
 	padding: 0.5rem;
-	background-color: rgb(165, 162, 148);
-	background-color: rgb(145, 168, 182);
 	// border-radius: 10px;
 	max-width: 752px;
 }

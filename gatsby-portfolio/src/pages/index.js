@@ -103,7 +103,7 @@ const IndexPage = ({ data }) => {
 						<h2 className={`${indexStyle.sectionTitle}`}>Featured Works</h2>
 						<div className={`${projectsStyles.projectsContainer}`}>
 							{filteredPosts}
-							{filteredPosts.length % 2 === 0 ? <></> : <div className={`${projectsStyles.projectWrapper}`}></div>}
+							{filteredPosts.length % 2 === 0 ? <></> : <div className={`${projectsStyles.projectWrapper}`} style={{minHeight: `0px`,maxHeight: `0px !important`}}></div>}
 						</div>
 					</div>
 					<div className={indexStyle.projectsWrapper} />
