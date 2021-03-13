@@ -72,6 +72,7 @@
 
 .iframeResponsive {
 	// border: 3px solid white;
+	opacity: 0;
 	border: none;
 	position: absolute;
 	top: 0;
@@ -90,12 +91,27 @@
 
 .iframeFullSize {
 	// border: 3px solid white;
+	opacity: 0;
 	border: none;
 	border-radius: 10px;
 }
 
+.showVid{
+	opacity: 0;
+	animation: reveal 3s ease-in-out forwards;
+}
+
+@keyframes reveal {
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
 .seeMoreWrapper {
-	margin: 0 auto;
+	margin: 24px auto;
 	// margin-top: 24px;
 	padding-top: 0;
 	display: flex;
@@ -114,7 +130,20 @@
 }
 
 .infoIcon {
-	font-size: 1.5rem;
+	font-size: clamp(36px, 5vw, 70px);
+	opacity: 0;
+	animation: slideDown 1.5s ease-in-out 2s infinite normal none;
+}
+
+@keyframes slideDown{
+	from{
+		opacity: 0;
+		transform: translate(0, 0px);
+	}
+	to{
+		opacity: 1;
+		transform: translate(0, 25px);
+	}
 }
 
 .sectionTitle {
@@ -174,11 +203,7 @@
 		padding-top: 0px;
 	}
 	.seeMoreWrapper {
-		font-size: 2rem;
-		bottom: 10%;
-	}
-	.infoIcon {
-		font-size: 2.5rem;
+		margin: 48px 0;
 	}
 	.aboutText {
 		padding: 24px;

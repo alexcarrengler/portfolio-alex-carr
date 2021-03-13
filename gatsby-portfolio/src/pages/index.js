@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link, graphql } from "gatsby";
 import Img from "gatsby-image";
 
@@ -22,8 +22,15 @@ import projectsStyles from "./projects.module.scss";
 import backgroundImageStyle from "../components/imageComponents/backgroundImage.module.scss";
 
 const IndexPage = ({ data }) => {
+
+	const [loaded, setLoaded] = useState(false);
+
+	const toggleLoad = () => {
+		setLoaded(!loaded);
+	}
+
 	const projects = data.allMarkdownRemark.edges;
-	console.log(projects);
+	// console.log(projects);
 	const posts = projects.filter((p) => p.node.frontmatter.featured);
 	const filteredPosts = posts.map((p) => (
 		<div key={p.node.frontmatter.title} className={`${projectsStyles.projectWrapper}`}>
@@ -45,17 +52,18 @@ const IndexPage = ({ data }) => {
 					<div className={`${indexStyle.iframeContainer} align-center`}>
 						<iframe
 							title="index-vid"
-							className={indexStyle.iframeResponsive}
+							className={ loaded ? `${indexStyle.iframeResponsive} ${indexStyle.showVid}`: `${indexStyle.iframeResponsive}`}
 							src={IntroContent.intro_video_src}
 							frameBorder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 							allowFullScreen
+							onLoad={toggleLoad}
 						/>
 					</div>
 					<div className={`${indexStyle.iframeDesktop} align-center`}>
 						<iframe
 							title="index-vid"
-							className={indexStyle.iframeFullSize}
+							className={ loaded ? `${indexStyle.iframeFullSize} ${indexStyle.showVid}`: `${indexStyle.iframeFullSize}`}
 							width="840"
 							height="472"
 							src={IntroContent.intro_video_src}
@@ -69,7 +77,6 @@ const IndexPage = ({ data }) => {
 						role="link"
 						onClick={() => scrollTo("#scroll-about")}
 					>
-						<h3 className={`${indexStyle.info} align-center`}>See More</h3>
 						<FaAngleDown className={`${indexStyle.infoIcon} align-center`} />
 					</div>
 				</div>
