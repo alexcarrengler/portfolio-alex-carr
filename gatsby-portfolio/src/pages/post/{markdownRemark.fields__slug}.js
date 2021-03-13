@@ -12,20 +12,19 @@ export default function PostTemplate({ data }) {
 	const imgFiles = data.allFile.edges.filter((edge) => edge.node.extension !== "md");
 	const post = data.markdownRemark;
 	return (
-		<section>
+		<section className={postStyles.page}>
 			<h1 className={`${pageStyles.title} ${projectsStyles.pageTitle}`}>{post.frontmatter.title}</h1>
 			<div className={`${postStyles.container}`}>
 				{/* {imgFiles.map((file) => <Img key={file.node.id} fluid={file.node.childImageSharp.fluid} className={postStyles.mainImage} />)} */}
 				<EmbedWrapper link={post.frontmatter.embeded_link} title={post.frontmatter.title} imgFiles={imgFiles}/>
 				<p className={postStyles.link}>
-					<a href={post.frontmatter.source_link} className={postStyles.a}>
-						Link
+					<a href={post.frontmatter.source_link} className={postStyles.a} target="_blank" rel="noopener noreferrer">
+						Published Work
 					</a>
 				</p>
 				{/* <p className={pageStyles.aboutText} style={{maxWidth: `1000px`}}>{post.internal.content}</p> */}
 				<div
-					className={pageStyles.aboutText}
-					style={{ maxWidth: `1000px`, paddingTop: `0`, paddingBottom: `0` }}
+					className={postStyles.text}
 					dangerouslySetInnerHTML={{ __html: post.html }}
 				/>
 			</div>

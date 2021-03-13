@@ -23,7 +23,7 @@ export default function iframeWrapper(props) {
 			</div>
 			<div
 					className={`${pageStyles.iframeDesktop}`}
-					style={{ maxWidth: `840px`, margin: `0 auto`, marginBottom: `32px` }}
+					style={{ maxWidth: `840px`, margin: `0 auto`}}
 				>
 					<iframe
 						title={props.title}
