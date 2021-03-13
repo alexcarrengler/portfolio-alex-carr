@@ -27,7 +27,13 @@ const IndexPage = ({ data }) => {
 
 	const toggleLoad = () => {
 		setLoaded(true);
+		console.log(`toggleLoad`);
 	}
+
+	setTimeout(function(){
+		toggleLoad();
+		console.log(`timeout toggleLoad`);
+	}, 1000);
 
 	const projects = data.allMarkdownRemark.edges;
 	// console.log(projects);
