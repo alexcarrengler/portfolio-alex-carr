@@ -113,12 +113,12 @@ const IndexPage = ({ data }) => {
 
 export const featuredPosts = graphql`
 	query featuredQuery {
-		allMarkdownRemark{
+		allMarkdownRemark(sort: {fields: frontmatter___updated_at}){
 			edges {
 				node {
 					frontmatter {
 						title
-						created_at
+						updated_at
           				featured
 						post_image {
 							childImageSharp {

@@ -36,7 +36,7 @@ const Scoring = ({ data }) => {
 
 export const scoringPosts = graphql`
 	query scoringQuery {
-		allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(scoring)/" } }) {
+		allMarkdownRemark(sort: {fields: frontmatter___updated_at}, filter: { fileAbsolutePath: { regex: "/(scoring)/" } }) {
 			edges {
 				node {
 					frontmatter {
