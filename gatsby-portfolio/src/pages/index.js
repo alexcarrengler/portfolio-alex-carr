@@ -1,4 +1,6 @@
 import React from "react";
+import { Link, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 import scrollTo from "gatsby-plugin-smoothscroll";
 
@@ -16,9 +18,21 @@ import BioContent from "../../site/home-page/bio-section.json";
 
 import "../main.scss";
 import indexStyle from "./index.module.scss";
+import projectsStyles from "./projects.module.scss";
 import backgroundImageStyle from "../components/imageComponents/backgroundImage.module.scss";
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+	const projects = data.allMarkdownRemark.edges;
+	console.log(projects);
+	const posts = projects.filter((p) => p.node.frontmatter.featured);
+	const filteredPosts = posts.map((p) => (
+		<div key={p.node.frontmatter.title} className={`${projectsStyles.projectWrapper}`}>
+			<Link to={`/post/${p.node.fields.slug}`} className={`${projectsStyles.projectLink}`}>
+				<Img fluid={p.node.frontmatter.post_image.childImageSharp.fluid} className={projectsStyles.thumbnail} />
+				<p className={projectsStyles.projectTitle}>{p.node.frontmatter.title}</p>
+			</Link>
+		</div>
+	));
 	return (
 		<div>
 			<SEO id="top" title="Home" />
@@ -74,6 +88,10 @@ const IndexPage = () => {
 				<div className={indexStyle.projectsSection}>
 					<div id="scroll-projects">
 						<h2 className={`${indexStyle.sectionTitle}`}>Featured Works</h2>
+						<div className={`${projectsStyles.projectsContainer}`}>
+							{filteredPosts}
+							{filteredPosts.length % 2 === 0 ? <></> : <div className={`${projectsStyles.projectWrapper}`}></div>}
+						</div>
 					</div>
 					<div className={indexStyle.projectsWrapper} />
 				</div>
@@ -92,5 +110,31 @@ const IndexPage = () => {
 		</div>
 	);
 };
+
+export const featuredPosts = graphql`
+	query featuredQuery {
+		allMarkdownRemark{
+			edges {
+				node {
+					frontmatter {
+						title
+						created_at
+          				featured
+						post_image {
+							childImageSharp {
+								fluid{
+									...GatsbyImageSharpFluid
+								}
+							}
+						}
+					}
+					fields {
+						slug
+					}
+				}
+			}
+		}
+	}
+`;
 
 export default IndexPage;

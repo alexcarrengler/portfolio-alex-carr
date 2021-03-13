@@ -18,6 +18,12 @@ collections:
     editor:
       preview: false
     fields:
+      - label: "Created At"
+        name: "created_at"
+        widget: "datetime"
+        date_format: "MM/DD/YYYY" # e.g. 24.12.2021
+        time_format: false
+        format: "LLLL"
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Source Link', name: source_link, widget: 'string'}
       - { label: 'Embeded Link', name: 'embeded_link', widget: 'string'}
@@ -25,6 +31,7 @@ collections:
       - label: 'Post Image'
         name: 'post_image'
         widget: 'image'
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
   - name: 'production'
     label: 'Production'
     label_singular: 'Post'
@@ -37,6 +44,12 @@ collections:
     editor:
       preview: false
     fields:
+      - label: "Created At"
+        name: "created_at"
+        widget: "datetime"
+        date_format: "MM/DD/YYYY" # e.g. 24.12.2021
+        time_format: false
+        format: "LLLL"
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Source Link', name: source_link, widget: 'string'}
       - { label: 'Embeded Link', name: 'embeded_link', widget: 'string', required: false}
@@ -44,6 +57,7 @@ collections:
       - label: 'Post Image'
         name: 'post_image'
         widget: 'image'
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
   - name: 'performance'
     label: 'Performance'
     label_singular: 'Post'
@@ -56,6 +70,12 @@ collections:
     editor:
       preview: false
     fields:
+      - label: "Created At"
+        name: "created_at"
+        widget: "datetime"
+        date_format: "MM/DD/YYYY" # e.g. 24.12.2021
+        time_format: false
+        format: "LLLL"
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Source Link', name: source_link, widget: 'string'}
       - { label: 'Embeded Link', name: 'embeded_link', widget: 'string', required: false}
@@ -63,6 +83,7 @@ collections:
       - label: 'Post Image'
         name: 'post_image'
         widget: 'image'
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
   - name: 'home_page'
     label: 'Home Page'
     files:
