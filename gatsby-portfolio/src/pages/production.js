@@ -36,7 +36,7 @@ const Production = ({ data }) => {
 
 export const productionPosts = graphql`
 	query productionQuery {
-		allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(production)/" } }) {
+		allMarkdownRemark(sort: {fields: frontmatter___updated_at}, filter: { fileAbsolutePath: { regex: "/(production)/" } }) {
 			edges {
 				node {
 					frontmatter {

@@ -25,7 +25,7 @@ collections:
         time_format: "HH:mm" # e.g. 21:07
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Source Link', name: source_link, widget: 'string'}
-      - { label: 'Embeded Link', name: 'embeded_link', widget: 'string'}
+      - { label: 'Embeded Link', name: 'embeded_link', widget: 'string', default: '', required: false}
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Post Image'
         name: 'post_image'
@@ -50,7 +50,7 @@ collections:
         time_format: "HH:mm" # e.g. 21:07
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Source Link', name: source_link, widget: 'string'}
-      - { label: 'Embeded Link', name: 'embeded_link', widget: 'string', required: false}
+      - { label: 'Embeded Link', name: 'embeded_link', widget: 'string', default: '', required: false}
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Post Image'
         name: 'post_image'
@@ -75,7 +75,7 @@ collections:
         time_format: "HH:mm" # e.g. 21:07
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Source Link', name: source_link, widget: 'string'}
-      - { label: 'Embeded Link', name: 'embeded_link', widget: 'string', required: false}
+      - { label: 'Embeded Link', name: 'embeded_link', widget: 'string', default: '', required: false}
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Post Image'
         name: 'post_image'

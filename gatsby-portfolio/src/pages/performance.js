@@ -35,7 +35,7 @@ const Performance = ({ data }) => {
 
 export const performancePosts = graphql`
 	query performanceQuery {
-		allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(performance)/" } }) {
+		allMarkdownRemark(sort: {fields: frontmatter___updated_at}, filter: { fileAbsolutePath: { regex: "/(performance)/" } }) {
 			edges {
 				node {
 					frontmatter {
