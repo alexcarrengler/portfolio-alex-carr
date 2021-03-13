@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
 	const [loaded, setLoaded] = useState(false);
 
 	const toggleLoad = () => {
-		setLoaded(!loaded);
+		setLoaded(true);
 	}
 
 	const projects = data.allMarkdownRemark.edges;
@@ -46,13 +46,13 @@ const IndexPage = ({ data }) => {
 			<section>
 				<div className={indexStyle.introSection}>
 					<div className={indexStyle.titleWrapper}>
-						<h1 className={`${indexStyle.title} align-center`}>{IntroContent.site_title}</h1>
-						<p className={indexStyle.subTitle}>{IntroContent.site_subtitle}</p>
+						<h1 className={loaded ? `${indexStyle.title} align-center ${indexStyle.show}`: `${indexStyle.title} align-center`}>{IntroContent.site_title}</h1>
+						<p className={loaded ? `${indexStyle.subTitle} ${indexStyle.show}`: `${indexStyle.subTitle} `}>{IntroContent.site_subtitle}</p>
 					</div>
 					<div className={`${indexStyle.iframeContainer} align-center`}>
 						<iframe
 							title="index-vid"
-							className={ loaded ? `${indexStyle.iframeResponsive} ${indexStyle.showVid}`: `${indexStyle.iframeResponsive}`}
+							className={ loaded ? `${indexStyle.iframeResponsive} ${indexStyle.show}`: `${indexStyle.iframeResponsive}`}
 							src={IntroContent.intro_video_src}
 							frameBorder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -63,7 +63,7 @@ const IndexPage = ({ data }) => {
 					<div className={`${indexStyle.iframeDesktop} align-center`}>
 						<iframe
 							title="index-vid"
-							className={ loaded ? `${indexStyle.iframeFullSize} ${indexStyle.showVid}`: `${indexStyle.iframeFullSize}`}
+							className={ loaded ? `${indexStyle.iframeFullSize} ${indexStyle.show}`: `${indexStyle.iframeFullSize}`}
 							width="840"
 							height="472"
 							src={IntroContent.intro_video_src}

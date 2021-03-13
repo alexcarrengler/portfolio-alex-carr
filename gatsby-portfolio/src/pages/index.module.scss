@@ -48,6 +48,7 @@
 }
 
 .title {
+	opacity: 0;
 	margin: 0 auto;
 	padding: 0;
 	// padding-top: 10%;
@@ -56,6 +57,7 @@
 }
 
 .subTitle {
+	opacity: 0;
 	margin: 0 auto;
 }
 
@@ -96,8 +98,8 @@
 	border-radius: 10px;
 }
 
-.showVid{
-	opacity: 0;
+.show{
+	opacity: 1;
 	animation: reveal 3s ease-in-out forwards;
 }
 
