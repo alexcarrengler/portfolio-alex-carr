@@ -107,7 +107,6 @@ const IndexPage = ({ data }) => {
 							{filteredPosts.length % 2 === 0 ? <></> : <div className={`${projectsStyles.projectWrapper}`} style={{minHeight: `0px`,maxHeight: `0px !important`}}></div>}
 						</div>
 					</div>
-					<div className={indexStyle.projectsWrapper} />
 				</div>
 				<div id="scroll-contact" className={indexStyle.contactSection}>
 					<div className="pageContainer">
