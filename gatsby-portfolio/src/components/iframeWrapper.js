@@ -16,7 +16,7 @@ export default function IframeWrapper(props) {
 	setTimeout(function(){
 		toggleLoad();
 		console.log(`timeout toggleLoad`);
-	}, 1000);
+	}, 500);
 
 
     let iframe;
@@ -55,10 +55,10 @@ export default function IframeWrapper(props) {
         )
     }
     else if (props.link.includes('bandcamp.com/Embedded')) {
-        iframe = (<div className={`${pageStyles.iframeDesktop}`} style={{ margin: `0 auto`, marginBottom: `32px`, display: `block`}}>
-            <iframe style={{border: 0, display: `block`}} 
-            className={`${pageStyles.iframeFullSize} ${wrapperStyles.bandcampWrapper}`}
-            style={{opacity: `1 !important`}}
+        iframe = (<div className={`${pageStyles.iframeDesktop}`} style={{ margin: `0 auto`, marginBottom: `32px`, display: `flex`, justifyContent: `center`}}>
+            <iframe 
+            className={ loaded ? `${pageStyles.iframeFullSize} ${pageStyles.show} ${wrapperStyles.bandcampWrapper}`: `${pageStyles.iframeFullSize} ${wrapperStyles.bandcampWrapper}`}
+            style={{border: 0, display: `block`, margin: `0 auto`}} 
             src="https://bandcamp.com/EmbeddedPlayer/album=3572913911/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" 
             seamless>
                 &lt;a href="https://alexcarrmusic.bandcamp.com/album/questions-of-travel"&gt;Questions of Travel by Alex Carr&lt;/a&gt;
