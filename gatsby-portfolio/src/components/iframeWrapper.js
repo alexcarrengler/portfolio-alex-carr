@@ -10,12 +10,12 @@ export default function IframeWrapper(props) {
 
 	const toggleLoad = () => {
 		setLoaded(true);
-		console.log(`toggleLoad`);
+		// console.log(`toggleLoad`);
 	}
 
 	setTimeout(function(){
 		toggleLoad();
-		console.log(`timeout toggleLoad`);
+		// console.log(`timeout toggleLoad`);
 	}, 500);
 
 

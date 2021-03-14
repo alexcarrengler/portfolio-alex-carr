@@ -27,12 +27,12 @@ const IndexPage = ({ data }) => {
 
 	const toggleLoad = () => {
 		setLoaded(true);
-		console.log(`toggleLoad`);
+		// console.log(`toggleLoad`);
 	}
 
 	setTimeout(function(){
 		toggleLoad();
-		console.log(`timeout toggleLoad`);
+		// console.log(`timeout toggleLoad`);
 	}, 1000);
 
 	const projects = data.allMarkdownRemark.edges;
@@ -42,7 +42,7 @@ const IndexPage = ({ data }) => {
 		<div key={p.node.frontmatter.title} className={`${projectsStyles.projectWrapper}`}>
 			<Link to={`/post/${p.node.fields.slug}`} className={`${projectsStyles.projectLink}`}>
 				<Img fluid={p.node.frontmatter.post_image.childImageSharp.fluid} className={projectsStyles.thumbnail} />
-				<p className={projectsStyles.projectTitle}>{p.node.frontmatter.title}</p>
+				<p className={projectsStyles.projectTitle}><span>{p.node.frontmatter.title}</span></p>
 			</Link>
 		</div>
 	));

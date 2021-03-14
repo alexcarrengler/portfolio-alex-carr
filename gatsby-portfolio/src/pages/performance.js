@@ -20,7 +20,7 @@ const Performance = ({ data }) => {
 	));
 
 	return (
-		<div className={projectsStyles.page} style={{ backgroundColor: `rgb(176, 178, 206)` }}>
+		<div className={projectsStyles.page} style={{ backgroundColor: `rgb(145, 168, 182)` }}>
 			<SEO id="top" title="Performance" />
 			<section>
 				<h1 className={`${pageStyles.title} ${projectsStyles.pageTitle}`}>Performance</h1>
