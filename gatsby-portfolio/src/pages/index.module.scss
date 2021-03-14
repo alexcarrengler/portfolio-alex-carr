@@ -142,12 +142,15 @@
 }
 
 @keyframes slideDown{
-	from{
+	0%{
 		opacity: 0;
 		transform: translate(0, 0px);
 	}
-	to{
+	50%{
 		opacity: 1;
+	}
+	100%{
+		opacity: 0;
 		transform: translate(0, 25px);
 	}
 }
