@@ -74,6 +74,7 @@
 	width: 95%;
 	flex-shrink: 0;
 	padding-top: 56.25%;
+	border: 3px solid rgba(247,247,240,255);
 }
 
 .iframeResponsive {
@@ -93,6 +94,7 @@
 
 .iframeDesktop {
 	display: none;
+	
 }
 
 .iframeFullSize {
@@ -100,6 +102,7 @@
 	opacity: 0;
 	border: none;
 	border-radius: 10px;
+	border: 3px solid rgba(247,247,240,255);
 }
 
 .show{
