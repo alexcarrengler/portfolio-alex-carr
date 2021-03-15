@@ -14,7 +14,7 @@ export default function footer() {
 			</span>
 			<span>
 				Site by{" "}
-				<a className={footerStyles.a} href="https://www.linkedin.com/in/miles-grossenbacher-908b171a3/">
+				<a className={footerStyles.a} href="https://milesgrossenbacher.com/">
 					Miles Grossenbacher
 				</a>
 			</span>
