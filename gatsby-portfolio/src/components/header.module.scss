@@ -67,7 +67,9 @@
 	width: 70vw;
 	z-index: 1000;
 	// background-color: rgb(145, 145, 145);
-	background-color: rgb(136, 136, 136);
+	background-color: #a89cac;
+	
+	// background-color: rgba(247,247,240,255);
 	margin-right: -70vw;
 	border-left: 3px solid white;
 }
@@ -98,7 +100,13 @@
 
 .navLink {
 	text-decoration: none;
+	// color: black;
 	color: white;
+	cursor: pointer;
+	transition: color 0.3s ease-in-out;
+	&:hover{
+		color: rgb(227, 226, 226);
+	}
 }
 
 .navLabelWrapper {
